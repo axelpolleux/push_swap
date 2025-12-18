@@ -6,7 +6,13 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 13:04:29 by apolleux          #+#    #+#             */
-/*   Updated: 2025/12/15 17:04:55 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/12/18 11:56:17 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
+
+int	main(int argc, char *argv[]);
+
+#endif
