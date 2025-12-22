@@ -10,7 +10,7 @@ The **push_swap** project is an algorithm challenge from the 42 school curriculu
 - Uses **two stacks (stack A and stack B)** and a **limited set of stack operations** to sort them,
 - Outputs the **shortest possible sequence of operations** that sorts the numbers in ascending order. :contentReference[oaicite:0]{index=0}
 
-The allowed operations include swapping, pushing between stacks, and rotating both stacks in forward and reverse directions (e.g., `sa`, `pb`, `ra`, `rrr`, etc.). :contentReference[oaicite:1]{index=1}
+The allowed operations include swapping, pushing between stacks, and rotating both stacks in forward and reverse directions (e.g., `sa`, `pb`, `ra`, `rrr`, etc.). :contentReference[oaicite:1]{index=1}u
 
 There’s also an optional bonus program called **checker** that reads operations and verifies whether they sort stack A correctly. :contentReference[oaicite:2]{index=2}
 
