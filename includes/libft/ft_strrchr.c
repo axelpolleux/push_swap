@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/15 13:04:29 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/05 17:17:59 by apolleux         ###   ########.fr       */
+/*   Created: 2025/10/18 11:25:04 by apolleux          #+#    #+#             */
+/*   Updated: 2025/10/21 18:22:24 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-int	main(int argc, char *argv[]);
-int	parser(int argc, char **argv);
+char	*ft_strrchr(const char *s, int c)
+{
+	int		i;
 
-#endif
+	i = ft_strlen(s);
+	if (s[i] == (unsigned char)c)
+		return ((char *)(s + i));
+	while (i--)
+	{
+		if (s[i] == (unsigned char)c)
+			return ((char *)s + i);
+	}
+	return (0);
+}

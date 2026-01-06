@@ -1,19 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/15 13:04:29 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/05 17:17:59 by apolleux         ###   ########.fr       */
+/*   Created: 2025/10/15 09:04:03 by apolleux          #+#    #+#             */
+/*   Updated: 2025/10/28 14:23:42 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-int	main(int argc, char *argv[]);
-int	parser(int argc, char **argv);
+void	*ft_memmove(void *dest, const void *src, size_t n)
+{
+	const unsigned char	*str1;
+	unsigned char		*str2;
+	size_t				i;
 
-#endif
+	str1 = src;
+	str2 = dest;
+	if (!dest && !src)
+		return (0);
+	if (src < dest)
+	{
+		i = n - 1;
+		while (i < n)
+		{
+			str2[i] = str1[i];
+			i--;
+		}
+	}
+	else
+	{
+		ft_memcpy(dest, src, n);
+	}
+	return (str2);
+}

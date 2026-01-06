@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/15 13:04:29 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/05 17:17:59 by apolleux         ###   ########.fr       */
+/*   Created: 2025/10/17 14:38:54 by apolleux          #+#    #+#             */
+/*   Updated: 2025/10/17 14:39:13 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-
-int	main(int argc, char *argv[]);
-int	parser(int argc, char **argv);
-
-#endif
+int	ft_tolower(int c)
+{
+	if ((c >= 'A' && c <= 'Z'))
+	{
+		return (c + 32);
+	}
+	return (c);
+}

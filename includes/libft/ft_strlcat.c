@@ -1,29 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parser.c                                           :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/18 11:49:43 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/05 18:06:17 by apolleux         ###   ########.fr       */
+/*   Created: 2025/10/15 13:14:32 by apolleux          #+#    #+#             */
+/*   Updated: 2025/10/29 17:03:34 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf/ft_printf.h"
-#include "../includes/libft/libft.h"
-#include "../includes/push_swap.h"
+#include "libft.h"
 
-int	parser(int argc, char	**argv)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int	i;
+	size_t	i;
+	size_t	dlen;
+	size_t	slen;
+	size_t	tofill;
 
 	i = 0;
-	while (i < argc)
+	slen = ft_strlen(src);
+	if (size == 0)
+		return (slen);
+	dlen = ft_strlen(dst);
+	if (dlen >= size)
+		dlen = size;
+	if (dlen == size)
+		return (size + slen);
+	tofill = size - dlen - 1;
+	while (src[i] && tofill--)
 	{
-		if (argv[i][0] == '4')
-			return 0;
+		dst[dlen + i] = src[i];
 		i++;
 	}
-	return (1);
+	dst[dlen + i] = '\0';
+	return (dlen + slen);
 }

@@ -6,11 +6,9 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:21:12 by apolleux          #+#    #+#             */
-/*   Updated: 2025/12/15 13:59:59 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:46:42 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isdigit(int c)
 {
