@@ -1,48 +1,40 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/12/18 13:50:00 by apolleux          #+#    #+#              #
-#    Updated: 2026/01/06 10:38:04 by apolleux         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 CC      = cc
-CFLAGS  = -Wall -Werror -Wextra
+CFLAGS  = -Wall -Wextra -Werror
 NAME    = push_swap
 
-# ------------------ Sources ------------------ #
-FILES =	srcs/main.c \
+SRCS =	srcs/main.c \
 		srcs/parser.c
 
-INCLUDES =	-I includes/libft/libft.h \
-			-I includes/ft_printf/ft_printf.h \
-			-I includes/push_swap.h
+OBJS = $(SRCS:.c=.o)
 
-LIBFT = includes/libft/libft.a
-PRINTF = includes/ft_printf/libftprintf.a
+LIBFT_DIR   = includes/libft
+LIBFT       = $(LIBFT_DIR)/libft.a
 
-
-OBJECTS = $(FILES:.c=.o)
+PRINTF_DIR  = includes/ft_printf
+PRINTF      = $(PRINTF_DIR)/libftprintf.a
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS) $(LIBFT) $(PRINTF)
-	$(CC) $(OBJECTS) $(LIBFT) $(PRINTF) -o $(NAME)
+$(NAME): $(OBJS) $(LIBFT) $(PRINTF)
+	$(CC) $(CFLAGS) $(OBJS) $(LIBFT) $(PRINTF) -o $(NAME)
 
 $(LIBFT):
-	$(MAKE) -C includes --no-print-directory
+	make -C $(LIBFT_DIR)
+
+$(PRINTF):
+	make -C $(PRINTF_DIR)
 
 %.o: %.c
-	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJECTS)
+	make -C $(LIBFT_DIR) clean
+	make -C $(PRINTF_DIR) clean
+	rm -f $(OBJS)
 
 fclean: clean
+	make -C $(LIBFT_DIR) fclean
+	make -C $(PRINTF_DIR) fclean
 	rm -f $(NAME)
 
 re: fclean all
