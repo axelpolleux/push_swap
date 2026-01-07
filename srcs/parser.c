@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 11:49:43 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/07 18:09:40 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/07 18:40:36 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,8 @@ int	parser(int argc, char	**argv)
 	i = 1;
 	while (argv[i])
 	{
-		// if (ft_atoi(argv[i]) == 0 || argv[i][0] != '0')
-		// 	return (0);
+		if (ft_atoi(argv[i]) == 0 && argv[i][0] != '0')
+			return (0);
 		i++;
 	}
 
@@ -53,9 +53,10 @@ int	parser(int argc, char	**argv)
 		return (0);
 	args = space_cleaner(argc, argv);
 	i = 0;
-	while (args[i])
+	while (argv[i])
 	{
-		ft_printf("%s\n", args[i]);
+		if (ft_atoi(args[i]) == 0 && args[i][0] != '0')
+			return (0);
 		i++;
 	}
 	return (1);
