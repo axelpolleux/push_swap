@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 11:49:43 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/06 11:03:51 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/07 18:09:40 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,48 @@
 #include "../includes/libft/libft.h"
 #include "../includes/push_swap.h"
 
-int	parser(int argc, char	**argv)
+static char	**space_cleaner(int argc, char **args)
 {
-	int	i;
+	int		i;
+	char	*str;
+	char	**result;
 
-	i = 0;
+	i = 1;
+	str = "";
+
 	while (i < argc)
 	{
-		if (argv[i][0] == '4')
-			return 0;
+		if (args[i] == 0)
+			return (0);
+		str = ft_strjoin(str, " ");
+		str = ft_strjoin(str, args[i]);
+		i++;
+	}
+	result = ft_split(str, ' ');
+
+	return (result);
+}
+
+int	parser(int argc, char	**argv)
+{
+	char	**args;
+	int	i;
+
+	i = 1;
+	while (argv[i])
+	{
+		// if (ft_atoi(argv[i]) == 0 || argv[i][0] != '0')
+		// 	return (0);
+		i++;
+	}
+
+	if (space_cleaner(argc, argv) == 0)
+		return (0);
+	args = space_cleaner(argc, argv);
+	i = 0;
+	while (args[i])
+	{
+		ft_printf("%s\n", args[i]);
 		i++;
 	}
 	return (1);
