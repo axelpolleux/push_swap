@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 11:51:54 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/06 17:39:27 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/08 09:32:21 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,8 @@
 
 int	main(int argc, char *argv[])
 {
-
 	if (parser(argc, argv) == 0)
 	{
-		(void)argc;
-		(void)argv;
 		ft_printf("Error\n");
 		return (0);
 	}
