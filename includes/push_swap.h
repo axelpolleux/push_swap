@@ -14,6 +14,6 @@
 # define PUSH_SWAP_H
 
 int	main(int argc, char *argv[]);
-int	*parser(int argc, char **argv);
+int	parser(int argc, char **argv);
 
 #endif

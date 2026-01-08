@@ -70,10 +70,9 @@ static char	**space_cleaner(int argc, char **args)
 	return (result);
 }
 
-int	*parser(int argc, char	**argv)
+int	parser(int argc, char	**argv)
 {
 	char	**args;
-	int		*result[100];
 	int	i;
 
 	i = 0;
@@ -94,5 +93,5 @@ int	*parser(int argc, char	**argv)
 		ft_printf("%d\n", ft_atoi(args[i]));
 		i++;
 	}
-	return (*result);
+	return (1);
 }
