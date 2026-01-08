@@ -3,7 +3,10 @@ CFLAGS  = -Wall -Wextra -Werror -g
 NAME    = push_swap
 
 SRCS =	srcs/main.c \
-		srcs/parser.c
+		srcs/instructions/push.c \
+		srcs/instructions/rotate.c \
+		srcs/instructions/swap.c \
+		srcs/parser/parser.c
 
 OBJS = $(SRCS:.c=.o)
 

@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf/ft_printf.h"
-#include "../includes/libft/libft.h"
-#include "../includes/push_swap.h"
+#include "../../includes/ft_printf/ft_printf.h"
+#include "../../includes/libft/libft.h"
+#include "../../includes/push_swap.h"
 
 static int	check_arg(char **args)
 {
