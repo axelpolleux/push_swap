@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 13:28:51 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/07 15:33:48 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/08 10:42:47 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ int	ft_atoi(const char *nptr)
 		res += *nptr - '0';
 		nptr++;
 	}
+	if (*nptr != '\0')
+		return (0);
 	return (res * sign);
 }
