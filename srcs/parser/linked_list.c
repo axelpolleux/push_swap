@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 16:40:46 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/08 17:17:55 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/08 18:04:13 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,11 @@ void	link_manage(char **args, t_node stack_a)
 	i = 0;
 	while (args[i])
 	{
-		ft_printf("%d\n", ft_atoi(args[i]));
+		t_node *new_node;
+		new_node = ft_lstnew(ft_atoi(args[i])); // newnode == {value: ft_atoi(args[i]), next: NULL};
+		new_node->value = ;
+		ft_printf("%d\n", );
+		ft_lstadd_back(stack_a, );
 		i++;
 	}
 }
