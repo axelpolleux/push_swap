@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   rotate_all.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/15 11:51:54 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/08 17:18:32 by apolleux         ###   ########.fr       */
+/*   Created: 2026/01/08 17:07:16 by apolleux          #+#    #+#             */
+/*   Updated: 2026/01/08 17:08:20 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf/ft_printf.h"
-#include "../includes/libft/libft.h"
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
-int	main(int argc, char *argv[])
+void	rr(t_node stack_a, t_node stack_b)
 {
-	t_node	stack_a;
-	t_node	stack_b;
-
+	(void)stack_a;
 	(void)stack_b;
-	if (parser(argc, argv, stack_a) == 0)
-	{
-		ft_printf("Error\n");
-		return (0);
-	}
-	// parser(argc, argv, stack_a);
+}
+
+void	rrr(t_node stack_a, t_node stack_b)
+{
+	(void)stack_a;
+	(void)stack_b;
 }

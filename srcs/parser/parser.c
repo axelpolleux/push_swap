@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 11:49:43 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/08 15:18:46 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/08 17:16:18 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,11 @@ static char	**space_cleaner(int argc, char **args)
 	return (result);
 }
 
-int	parser(int argc, char	**argv)
+int	parser(int argc, char	**argv, t_node stack_a)
 {
 	char	**args;
 	int		i;
+	(void)stack_a;
 
 	i = 0;
 	while (argv[i])
@@ -86,10 +87,6 @@ int	parser(int argc, char	**argv)
 	if (!check_arg(args))
 		return (0);
 	i = 0;
-	while (args[i])
-	{
-		ft_printf("%d\n", ft_atoi(args[i]));
-		i++;
-	}
+	link_manage(args, stack_a);
 	return (1);
 }

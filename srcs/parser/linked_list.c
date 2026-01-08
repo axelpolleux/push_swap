@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   linked_list.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/15 11:51:54 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/08 17:18:32 by apolleux         ###   ########.fr       */
+/*   Created: 2026/01/08 16:40:46 by apolleux          #+#    #+#             */
+/*   Updated: 2026/01/08 17:17:55 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf/ft_printf.h"
-#include "../includes/libft/libft.h"
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
+#include "../../includes/libft/libft.h"
+#include "../../includes/ft_printf/ft_printf.h"
 
-int	main(int argc, char *argv[])
+void	link_manage(char **args, t_node stack_a)
 {
-	t_node	stack_a;
-	t_node	stack_b;
+	int	i;
 
-	(void)stack_b;
-	if (parser(argc, argv, stack_a) == 0)
+	(void)stack_a;
+	i = 0;
+	while (args[i])
 	{
-		ft_printf("Error\n");
-		return (0);
+		ft_printf("%d\n", ft_atoi(args[i]));
+		i++;
 	}
-	// parser(argc, argv, stack_a);
 }
