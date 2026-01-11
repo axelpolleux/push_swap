@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 11:49:43 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/11 16:35:17 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/11 16:43:30 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,6 @@ int	parser(int argc, char	**argv, t_node stack_a)
 		return (0);
 	i = 0;
 	link_manage(args);
+	ft_printf("Hello, World !");
 	return (1);
 }
