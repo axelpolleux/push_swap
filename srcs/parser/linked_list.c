@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 16:40:46 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/11 17:38:47 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/11 17:51:42 by axel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 
 void	link_manage(char **args)
 {
-	t_node	stack_a;
-	stack
+	(void)args;
 
 }
