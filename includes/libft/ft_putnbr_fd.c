@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:54:53 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/28 14:25:16 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/30 10:49:22 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	if (fd <= 0)
+		return ;
 	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);

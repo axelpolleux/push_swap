@@ -6,7 +6,7 @@
 #    By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/15 14:12:20 by apolleux          #+#    #+#              #
-#    Updated: 2025/12/15 18:13:54 by apolleux         ###   ########.fr        #
+#    Updated: 2025/10/30 10:11:59 by apolleux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,6 +68,7 @@ all: ${NAME}
 ${NAME}: ${OBJECTS}
 	ar rcs ${NAME} ${OBJECTS}
 
+
 %.o: %.c
 	${CC} ${CFLAGS} $< -c -o $@
 
@@ -80,3 +81,5 @@ fclean: clean
 	rm -f ${NAME}
 
 re: fclean all
+
+.PHONY: all bonus clean fclean re

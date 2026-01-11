@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 17:23:44 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/29 18:34:46 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/30 10:58:35 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,9 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	{
 		trigger = f(lst->content);
 		new_obj = ft_lstnew(trigger);
-		if (!new_obj || !trigger)
+		if (!new_obj)
 		{
 			del(trigger);
-			ft_lstclear(&new_obj, del);
 			ft_lstclear(&new_list, del);
 			return (0);
 		}

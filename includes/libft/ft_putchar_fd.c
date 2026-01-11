@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:54:31 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/29 18:18:27 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/30 10:48:27 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	if (fd > 0)
+		write(fd, &c, 1);
 }

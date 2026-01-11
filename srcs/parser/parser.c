@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 11:49:43 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/10 10:14:45 by axel             ###   ########.fr       */
+/*   Updated: 2026/01/11 16:35:17 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,6 @@ int	parser(int argc, char	**argv, t_node stack_a)
 	if (!check_arg(args))
 		return (0);
 	i = 0;
-	link_manage(args, stack_a);
+	link_manage(args);
 	return (1);
 }

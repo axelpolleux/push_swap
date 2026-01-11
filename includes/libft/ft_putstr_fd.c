@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:54:38 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/29 18:18:56 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/30 10:48:43 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (s)
+	if (s && fd > 0)
 		write(fd, s, ft_strlen(s));
 }

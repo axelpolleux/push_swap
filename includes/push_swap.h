@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 13:04:29 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/08 17:16:56 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/11 16:35:02 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,11 @@ typedef struct s_node
 	int				value;
 	int				index;
 	struct s_node	*next;
+	struct s_node	*prev;
 }	t_node;
 
 int		main(int argc, char *argv[]);
 int		parser(int argc, char **argv, t_node stack_a);
-void	link_manage(char **args, t_node stack_a);
+void	link_manage(char **args);
 
 #endif

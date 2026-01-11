@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:54:02 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/29 18:12:43 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/30 10:33:37 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 static int	count_word(char *str, char c)
 {
 	int	count;
-	int	x;
+	int	trigger;
 
 	count = 0;
-	x = 0;
+	trigger = 0;
 	while (*str)
 	{
-		if ((*str != c) && (x == 0))
+		if ((*str != c) && (trigger == 0))
 		{
-			x = 1;
+			trigger = 1;
 			count++;
 		}
 		else if (*str == c)
-			x = 0;
+			trigger = 0;
 		str++;
 	}
 	return (count);

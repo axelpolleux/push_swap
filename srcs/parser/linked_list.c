@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 16:40:46 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/10 10:13:44 by axel             ###   ########.fr       */
+/*   Updated: 2026/01/11 16:34:10 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,7 @@
 #include "../../includes/ft_printf/ft_printf.h"
 #include "../../includes/libft/libft.h"
 
-void	link_manage(char **args, t_node stack_a)
+void	link_manage(char **args)
 {
-	int	i;
-
-	(void)stack_a;
-	i = 0;
-	while (args[i])
-	{
-		ft_printf("%s\n", args[i]);
-		i++;
-	}
+	(void)args;
 }

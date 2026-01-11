@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:03:11 by apolleux          #+#    #+#             */
-/*   Updated: 2025/10/29 17:49:50 by apolleux         ###   ########.fr       */
+/*   Updated: 2025/10/30 10:21:19 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	char		*str;
-	size_t		i;
+	unsigned char	*str;
+	size_t			i;
 
 	str = s;
 	i = 0;
