@@ -29,3 +29,10 @@ Clone the repository and run:
 
 ```sh
 make
+```
+Or, even:
+```sh
+make re && make clean
+```
+
+Make clean is the easiest solution to clean up the project directory and keeping it work
