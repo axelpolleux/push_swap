@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 16:41:00 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/08 17:03:59 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/10 10:14:23 by axel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,12 @@ void	sa(t_node stack_a)
 {
 	(void)stack_a;
 }
+
 void	sb(t_node stack_a)
 {
 	(void)stack_a;
 }
+
 void	ss(t_node stack_a, t_node stack_b)
 {
 	(void)stack_a;

@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 11:49:43 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/08 17:16:18 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/10 10:14:45 by axel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,8 @@ int	parser(int argc, char	**argv, t_node stack_a)
 {
 	char	**args;
 	int		i;
-	(void)stack_a;
 
+	(void)stack_a;
 	i = 0;
 	while (argv[i])
 	{

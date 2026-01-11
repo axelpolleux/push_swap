@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 11:51:54 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/08 17:18:32 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/10 10:15:20 by axel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@ int	main(int argc, char *argv[])
 	t_node	stack_a;
 	t_node	stack_b;
 
+	stack_a.next = NULL;
+	stack_a.index = 2;
+	stack_a.value = 45;
 	(void)stack_b;
 	if (parser(argc, argv, stack_a) == 0)
 	{
 		ft_printf("Error\n");
 		return (0);
 	}
-	// parser(argc, argv, stack_a);
 }
