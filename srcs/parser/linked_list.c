@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 16:40:46 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/11 18:06:47 by axel             ###   ########.fr       */
+/*   Updated: 2026/01/11 19:03:58 by axel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,22 +18,12 @@
 
 t_node	*link_manage(char **args)
 {
-	int	i;
-	t_node	*stack;
-	t_node	*tmp;
-	t_node	*new;
+	t_node	*stack = NULL;
 
-	stack = NULL;
-	i = 0;
-	while (args[i])
-	{
-		new->value = ft_atoi(args[i]);
-
-		if (!stack)
-			stack = new;
-		else
-			tmp = new;
-		i++;
-	}
+	(void)args;
+	stack->value = 14;
+	stack->index = 0;
+	stack->next = NULL;
+	stack->prev = NULL;
 	return (stack);
 }
