@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 16:40:46 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/12 19:15:12 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/12 19:29:59 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static void	add_back(t_node **stack, t_node *node)
 	if (!*stack)
 	{
 		*stack = node;
-		return;
+		return ;
 	}
 	last = *stack;
 	while (last->next)
@@ -78,6 +78,6 @@ t_node	*make_stack(char **args)
 		i++;
 	}
 	if (check_list(stack) == 0)
-		return(0);
+		return (0);
 	return (stack);
 }

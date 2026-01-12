@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 11:51:54 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/12 16:43:59 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/12 19:29:12 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "../includes/libft/libft.h"
 #include "../includes/push_swap.h"
 
-int	error()
+int	error(void)
 {
 	ft_printf("Error\n");
 	return (0);
