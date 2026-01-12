@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 13:04:29 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/12 10:22:57 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/12 12:18:20 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,17 @@ typedef struct s_node
 	struct s_node	*prev;
 }	t_node;
 
+typedef struct s_stack
+{
+	t_node	*head;
+	t_node	*tail;
+} t_stack;
+
 int		main(int argc, char *argv[]);
+
 int		parser(int argc, char **argv, t_node *stack_a);
 
 // Linked lists functions
-int		check_list(t_node *stack_a);
 t_node	*link_manage(char **args);
 
 #endif
