@@ -5,28 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 16:40:46 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/12 19:29:59 by apolleux         ###   ########.fr       */
+/*   Created: 2026/01/13 11:15:28 by apolleux          #+#    #+#             */
+/*   Updated: 2026/01/13 14:07:48 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
-#include "../../includes/ft_printf/ft_printf.h"
 #include "../../includes/libft/libft.h"
+#include "../../includes/push_swap.h"
 
-static int	check_list(t_node *stack)
+static int	check_list(t_node *stack, int value)
 {
 	t_node	*index;
 
-	while (stack)
+	(void)value;
+	index = stack;
+	while (index)
 	{
-		index = stack;
-		while (index)
-		{
-			ft_printf("%d\n", index->value);
-			index = index->next;
-		}
-		stack = stack->next;
+		if (index->value == value)
+			return (0);
+		index = index->next;
 	}
 	return (1);
 }
@@ -64,6 +61,7 @@ static t_node	*new_node(int value)
 t_node	*make_stack(char **args)
 {
 	int		i;
+	int		value;
 	t_node	*stack;
 	t_node	*node;
 
@@ -71,13 +69,15 @@ t_node	*make_stack(char **args)
 	stack = NULL;
 	while (args[i])
 	{
+		if(!ft_atol(args[i], &value))
+			return (0);
+		ft_atol(args[i], &value);
 		node = new_node(ft_atoi(args[i]));
-		if (!node)
+		if (!node || !check_list(stack, value))
 			return (0);
 		add_back(&stack, node);
+
 		i++;
 	}
-	if (check_list(stack) == 0)
-		return (0);
 	return (stack);
 }
