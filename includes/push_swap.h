@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 13:04:29 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/13 14:21:09 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/13 16:12:24 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,6 @@ void	rra(t_node stack_a);
 void	rrb(t_node stack_b);
 void	rrr(t_node stack_a, t_node stack_b);
 
+// Others
+void	index(t_node *stack);
 #endif
