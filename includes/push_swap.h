@@ -43,5 +43,4 @@ void	rrb(t_node stack_b);
 void	rrr(t_node stack_a, t_node stack_b);
 
 // Others
-void	index(t_node *stack);
 #endif

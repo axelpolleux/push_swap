@@ -16,16 +16,4 @@
 
 void	index(t_node *stack)
 {
-	int		i;
-	int		index;
-	t_node	*tmp;
-
-	tmp = stack;
-	while (stack)
-	{
-		if (!stack->prev)
-			tmp = stack;
-
-		stack = stack->next;
-	}
 }
