@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 11:15:28 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/20 10:58:52 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/20 15:23:45 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static t_node	*new_node(int value)
 	if (!node)
 		return (0);
 	node->value = value;
-	node->index = -1;
+	node->index = 0;
 	node->next = NULL;
 	node->prev = NULL;
 	return (node);

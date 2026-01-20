@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 11:51:54 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/20 10:14:15 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/20 16:47:02 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,16 @@ int	error(void)
 void	algorithm(t_node *stack_a)
 {
 	t_node	*stack_b;
+	int	i = 0;
 
 	(void)stack_a;
 	(void)stack_b;
 	stack_index(stack_a);
+	while (stack_a)
+	{
+		ft_printf("Node %d\nValue: %d\nIndex: %d\n\n", ++i, stack_a->value, stack_a->index);
+		stack_a = stack_a->next;
+	}
 }
 
 int	main(int argc, char **argv)

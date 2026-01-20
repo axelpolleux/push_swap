@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 13:04:29 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/20 10:00:15 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/20 15:32:31 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	stack_index(t_node *stack);
 
 // Instructions
 void	sa(t_node *stack_a);
-void	sb(t_node *stack_a);
+void	sb(t_node *stack_b);
 void	ss(t_node *stack_a, t_node *stack_b);
 void	pa(t_node *stack_a, t_node *stack_b);
 void	pb(t_node *stack_a, t_node *stack_b);

@@ -6,13 +6,14 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 11:49:43 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/20 10:15:49 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:16:50 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include "../../includes/ft_printf/ft_printf.h"
 #include "../../includes/libft/libft.h"
 #include "../../includes/push_swap.h"
+#include <unistd.h>
 
 int	ft_atol(const char *str, int *out)
 {
@@ -94,6 +95,8 @@ static char	**space_cleaner(int argc, char **args)
 		i++;
 	}
 	result = ft_split(str, ' ');
+	str = NULL;
+	free(str);
 	return (result);
 }
 
