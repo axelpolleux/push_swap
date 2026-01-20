@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 11:51:54 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/20 10:01:01 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/20 10:14:15 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int	error(void)
 void	algorithm(t_node *stack_a)
 {
 	t_node	*stack_b;
+
 	(void)stack_a;
 	(void)stack_b;
 	stack_index(stack_a);

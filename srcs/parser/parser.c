@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 11:49:43 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/13 12:11:44 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/20 10:15:49 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,6 @@ int	ft_atol(const char *str, int *out)
 	*out = (int)res;
 	return (1);
 }
-
-
 
 static int	check_arg(char **args)
 {
