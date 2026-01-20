@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 13:04:29 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/13 16:12:24 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/20 09:39:11 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ int		main(int argc, char **argv);
 char	**parser(int argc, char **argv);
 int		ft_atol(const char *str, int *out);
 t_node	*make_stack(char **args);
+
+// algorithm
+void	stack_index(t_node *stack);
 
 // Instructions
 void	sa(t_node stack_a);
