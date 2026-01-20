@@ -6,11 +6,13 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 14:15:15 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/20 09:37:57 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/20 10:04:27 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
 void	stack_chunk(t_node *stack)
-{}
+{
+	(void)stack;
+}

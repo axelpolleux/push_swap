@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 11:51:54 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/20 09:43:32 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/20 10:01:01 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ int	error(void)
 
 void	algorithm(t_node *stack_a)
 {
+	t_node	*stack_b;
 	(void)stack_a;
-	t_node	stack_b;
-
 	(void)stack_b;
+	stack_index(stack_a);
 }
 
 int	main(int argc, char **argv)
@@ -33,7 +33,6 @@ int	main(int argc, char **argv)
 	t_node	*stack_b;
 	char	**args;
 
-	(void)stack_a;
 	(void)stack_b;
 	args = parser(argc, argv);
 	if (!args)
@@ -41,4 +40,5 @@ int	main(int argc, char **argv)
 	stack_a = make_stack(args);
 	if (!stack_a)
 		return (error());
+	algorithm(stack_a);
 }

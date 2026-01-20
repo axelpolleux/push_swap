@@ -6,11 +6,13 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 14:15:18 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/20 09:37:40 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/20 10:05:52 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
 void	stack_sort(t_node *stack)
-{}
+{
+	(void)stack;
+}

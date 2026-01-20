@@ -2,12 +2,16 @@ CC      = cc
 CFLAGS  = -Wall -Wextra -Werror -g
 NAME    = push_swap
 
-SRCS =	srcs/main.c					\
-		srcs/instructions/push.c	\
-		srcs/instructions/rotate.c	\
-		srcs/instructions/swap.c	\
-		srcs/parser/parser.c		\
-		srcs/parser/linked_list.c
+SRCS =	srcs/algorithm/chunk.c \
+		srcs/algorithm/index.c \
+		srcs/algorithm/sort.c \
+		srcs/instructions/push.c \
+		srcs/instructions/rotate_all.c \
+		srcs/instructions/rotate.c \
+		srcs/instructions/swap.c \
+		srcs/parser/linked_list.c \
+		srcs/parser/parser.c \
+		srcs/main.c
 
 OBJS = $(SRCS:.c=.o)
 
