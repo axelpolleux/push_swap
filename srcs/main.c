@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 11:51:54 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/21 15:04:00 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/21 15:29:19 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,6 @@ void	algorithm(t_node *stack_a)
 	(void)stack_b;
 	stack_index(stack_a);
 	print_list(stack_a);
-	sa(&stack_a);
-	print_list(stack_a);
 }
 
 int	main(int argc, char **argv)
@@ -51,6 +49,8 @@ int	main(int argc, char **argv)
 	char	**args;
 
 	(void)stack_b;
+	if (argc < 3)
+		return (0);
 	args = parser(argc, argv);
 	if (!args)
 		return (error());

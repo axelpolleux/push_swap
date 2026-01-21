@@ -6,25 +6,33 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 15:14:24 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/21 15:15:30 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/21 15:43:42 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int	ft_atol(const char *str, int *out)
+static char	*remove_signs(char *str, int *sign)
 {
-	long	res = 0;
-	int		sign = 1;
-
 	while (*str == ' ' || (*str >= 9 && *str <= 13))
 		str++;
+	*sign = 1;
 	if (*str == '+' || *str == '-')
 	{
 		if (*str == '-')
-			sign = -1;
+			*sign = -1;
 		str++;
 	}
+	return (str);
+}
+
+int	ft_atol(char *str, int *out)
+{
+	long	res;
+	int		sign;
+
+	res = 0;
+	str = remove_signs(str, &sign);
 	if (*str < '0' || *str > '9')
 		return (0);
 	while (*str >= '0' && *str <= '9')

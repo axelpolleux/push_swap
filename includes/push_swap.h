@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 13:04:29 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/21 14:46:00 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/21 15:37:28 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef struct s_node
 // Functions
 int		main(int argc, char **argv);
 char	**parser(int argc, char **argv);
-int		ft_atol(const char *str, int *out);
+int		ft_atol(char *str, int *out);
 t_node	*make_stack(char **args);
 
 // algorithm
