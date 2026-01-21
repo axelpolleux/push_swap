@@ -11,6 +11,7 @@ SRCS =	srcs/algorithm/chunk.c \
 		srcs/instructions/swap.c \
 		srcs/parser/linked_list.c \
 		srcs/parser/parser.c \
+		srcs/parser/atol.c \
 		srcs/main.c
 
 OBJS = $(SRCS:.c=.o)

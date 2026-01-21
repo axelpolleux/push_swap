@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 13:04:29 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/20 15:32:31 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/21 14:46:00 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,20 @@ t_node	*make_stack(char **args);
 
 // algorithm
 void	stack_index(t_node *stack);
+int		size_list(t_node *stack);
 
 // Instructions
-void	sa(t_node *stack_a);
-void	sb(t_node *stack_b);
-void	ss(t_node *stack_a, t_node *stack_b);
-void	pa(t_node *stack_a, t_node *stack_b);
-void	pb(t_node *stack_a, t_node *stack_b);
-void	ra(t_node *stack_a);
-void	rb(t_node *stack_b);
-void	rr(t_node *stack_a, t_node *stack_b);
-void	rra(t_node *stack_a);
-void	rrb(t_node *stack_b);
-void	rrr(t_node *stack_a, t_node *stack_b);
+void	sa(t_node **stack_a);
+void	sb(t_node **stack_b);
+void	ss(t_node **stack_a, t_node **stack_b);
+void	pa(t_node **stack_a, t_node **stack_b);
+void	pb(t_node **stack_a, t_node **stack_b);
+void	ra(t_node **stack_a);
+void	rb(t_node **stack_b);
+void	rr(t_node **stack_a, t_node **stack_b);
+void	rra(t_node **stack_a);
+void	rrb(t_node **stack_b);
+void	rrr(t_node **stack_a, t_node **stack_b);
 
 // Others
 #endif

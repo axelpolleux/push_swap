@@ -6,12 +6,26 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 11:15:28 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/20 15:23:45 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/21 13:03:12 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft/libft.h"
 #include "../../includes/push_swap.h"
+#include <stdlib.h>
+
+int	size_list(t_node *stack)
+{
+	int	i;
+
+	i = 0;
+	while (stack)
+	{
+		i++;
+		stack = stack->next;
+	}
+	return (i);
+}
 
 static int	check_list(t_node *stack, int value)
 {
