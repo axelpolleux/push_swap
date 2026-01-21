@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 11:49:43 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/21 15:17:51 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/21 17:12:09 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ static char	**space_cleaner(int argc, char **args)
 	return (result);
 }
 
-char	**parser(int argc, char	**argv)
+char	**parser(int argc, char	**argv, int *size)
 {
 	char	**args;
 	int		i;
@@ -86,5 +86,6 @@ char	**parser(int argc, char	**argv)
 		return (0);
 	if (!check_arg(args))
 		return (0);
+	*size = i + 1;
 	return (args);
 }

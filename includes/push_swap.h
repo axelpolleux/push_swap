@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 13:04:29 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/21 15:37:28 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/21 17:04:06 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PUSH_SWAP_H
 
 # include <limits.h>
-// S_list struct
+
 typedef struct s_node
 {
 	int				value;
@@ -25,11 +25,12 @@ typedef struct s_node
 
 // Functions
 int		main(int argc, char **argv);
-char	**parser(int argc, char **argv);
+char	**parser(int argc, char **argv, int *size);
 int		ft_atol(char *str, int *out);
 t_node	*make_stack(char **args);
 
 // algorithm
+int		is_already_sorted(t_node *stack);
 void	stack_index(t_node *stack);
 int		size_list(t_node *stack);
 
