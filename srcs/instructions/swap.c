@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 16:41:00 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/22 11:17:07 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/22 14:45:58 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,28 @@ static void	swap(t_node **stack)
 
 void	sa(t_node **stack_a)
 {
-	swap(stack_a);
-	ft_printf("sa\n");
+	if (*stack_a && size_list(*stack_a) > 1)
+	{
+		swap(stack_a);
+		ft_printf("sa\n");
+	}
 }
 
 void	sb(t_node **stack_b)
 {
-	swap(stack_b);
-	ft_printf("sb\n");
+	if (*stack_b && size_list(*stack_b) > 1)
+	{
+		swap(stack_b);
+		ft_printf("sb\n");
+	}
 }
 
 void	ss(t_node **stack_a, t_node **stack_b)
 {
-	swap(stack_a);
-	swap(stack_b);
-	ft_printf("ss\n");
+	if (*stack_a && *stack_b)
+	{
+		swap(stack_a);
+		swap(stack_b);
+		ft_printf("ss\n");
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 16:40:50 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/22 13:56:11 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/22 14:42:17 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,18 @@ static void	push(t_node **from, t_node **dest)
 
 void	pa(t_node **stack_a, t_node **stack_b)
 {
-	push(stack_b, stack_a);
-	ft_printf("pa\n");
+	if (*stack_b)
+	{
+		ft_printf("pa\n");
+		push(stack_b, stack_a);
+	}
 }
 
 void	pb(t_node **stack_a, t_node **stack_b)
 {
-	push(stack_a, stack_b);
-	ft_printf("pb\n");
+	if (*stack_a)
+	{
+		ft_printf("pb\n");
+		push(stack_a, stack_b);
+	}
 }
