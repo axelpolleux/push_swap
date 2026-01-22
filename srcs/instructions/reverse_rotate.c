@@ -6,15 +6,13 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 17:07:16 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/22 15:41:48 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/22 16:44:12 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_printf/ft_printf.h"
 #include "../../includes/push_swap.h"
 #include <unistd.h>
-
-
 
 static void	reverse_rotate(t_node **stack)
 {
@@ -25,12 +23,11 @@ static void	reverse_rotate(t_node **stack)
 	last = *stack;
 	while (last->next)
 		last = last->next;
-
 	last->prev->next = NULL;
 	last->prev = NULL;
+	*stack = last;
 	last->next = begin;
 	begin->prev = last;
-	*stack = last;
 }
 
 void	rra(t_node **stack_a)
@@ -50,7 +47,6 @@ void	rrb(t_node **stack_b)
 		ft_printf("rrb\n");
 	}
 }
-
 
 void	rrr(t_node **stack_a, t_node **stack_b)
 {

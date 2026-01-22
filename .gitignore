@@ -59,3 +59,4 @@ dkms.conf
 .idea/
 .vscode/
 checker_linux
+tester_push_swap

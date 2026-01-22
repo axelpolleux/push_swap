@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 16:41:00 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/22 14:45:58 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/22 17:00:18 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,9 @@ void	sb(t_node **stack_b)
 
 void	ss(t_node **stack_a, t_node **stack_b)
 {
-	if (*stack_a && *stack_b)
+	if ((*stack_a && size_list(*stack_a) > 1)
+		&& (*stack_b && size_list(*stack_b) > 1))
+
 	{
 		swap(stack_a);
 		swap(stack_b);

@@ -6,12 +6,13 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 16:40:50 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/22 14:42:17 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/22 17:11:50 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_printf/ft_printf.h"
 #include "../../includes/push_swap.h"
+#include <unistd.h>
 
 static void	push(t_node **from, t_node **dest)
 {
@@ -28,6 +29,9 @@ static void	push(t_node **from, t_node **dest)
 	else
 		*from = NULL;
 	tmp->next = *dest;
+	tmp->prev = NULL;
+	if (*dest)
+		(*dest)->prev = tmp;
 	*dest = tmp;
 }
 
