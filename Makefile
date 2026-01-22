@@ -11,7 +11,7 @@ SRCS    :=  srcs/algorithm/chunk.c \
             srcs/algorithm/index.c \
             srcs/algorithm/sort.c \
             srcs/instructions/push.c \
-            srcs/instructions/rotate_all.c \
+            srcs/instructions/reverse_rotate.c \
             srcs/instructions/rotate.c \
             srcs/instructions/swap.c \
             srcs/parser/linked_list.c \

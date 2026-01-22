@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 16:40:53 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/22 13:47:15 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/22 15:35:45 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,31 +20,41 @@ static void	rotate(t_node **stack)
 
 	tmp = *stack;
 	last = *stack;
-	if (size_list(*stack) < 2)
-		return ;
 	while (last->next)
 		last = last->next;
 
 	tmp->prev = last;
+	tmp->next->prev = NULL;
+	*stack = tmp->next;
+	tmp->next = NULL;
 	last->next = tmp;
 }
 
 void	ra(t_node **stack_a)
 {
-	rotate(stack_a);
-	ft_printf("ra\n");
+	if (size_list(*stack_a) >= 2)
+	{
+		rotate(stack_a);
+		ft_printf("ra\n");
+	}
 }
 
 void	rb(t_node **stack_b)
 {
-	rotate(stack_b);
-	ft_printf("ra\n");
+	if (size_list(*stack_b) >= 2)
+	{
+		rotate(stack_b);
+		ft_printf("rb\n");
+	}
 }
 
 
 void	rr(t_node **stack_a, t_node **stack_b)
 {
-	rotate(stack_a);
-	rotate(stack_b);
-	ft_printf("rr\n");
+	if ((size_list(*stack_a) >= 2) && (size_list(*stack_b) >= 2))
+	{
+		rotate(stack_a);
+		rotate(stack_b);
+		ft_printf("rr\n");
+	}
 }

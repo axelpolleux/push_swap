@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 11:51:54 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/22 14:46:37 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/22 15:32:58 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,6 @@ int	error(void)
 
 void	algorithm(t_node *stack_a, t_node *stack_b)
 {
-	// sa(&stack_a);
-	pb(&stack_a, &stack_b);
-	pb(&stack_a, &stack_b);
-	// sb(&stack_b);
-
 	ft_printf("-------Stack A-------\n");
 	print_list(stack_a);
 	ft_printf("-------Stack B-------\n");
