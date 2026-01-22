@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 16:40:53 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/22 15:35:45 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/22 15:38:01 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static void	rotate(t_node **stack)
 
 void	ra(t_node **stack_a)
 {
-	if (size_list(*stack_a) >= 2)
+	if (*stack_a && size_list(*stack_a) >= 2)
 	{
 		rotate(stack_a);
 		ft_printf("ra\n");
@@ -41,7 +41,7 @@ void	ra(t_node **stack_a)
 
 void	rb(t_node **stack_b)
 {
-	if (size_list(*stack_b) >= 2)
+	if (*stack_b && size_list(*stack_b) >= 2)
 	{
 		rotate(stack_b);
 		ft_printf("rb\n");
@@ -51,7 +51,7 @@ void	rb(t_node **stack_b)
 
 void	rr(t_node **stack_a, t_node **stack_b)
 {
-	if ((size_list(*stack_a) >= 2) && (size_list(*stack_b) >= 2))
+	if ((*stack_a && *stack_b) && (size_list(*stack_a) >= 2) && (size_list(*stack_b) >= 2))
 	{
 		rotate(stack_a);
 		rotate(stack_b);

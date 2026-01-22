@@ -6,30 +6,31 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 17:07:16 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/22 15:36:16 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/22 15:41:48 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_printf/ft_printf.h"
 #include "../../includes/push_swap.h"
+#include <unistd.h>
 
 
 
 static void	reverse_rotate(t_node **stack)
 {
-	t_node	*tmp;
+	t_node	*begin;
 	t_node	*last;
 
-	tmp = *stack;
+	begin = *stack;
 	last = *stack;
 	while (last->next)
 		last = last->next;
 
-	tmp->prev = last;
-	tmp->next->prev = NULL;
-	*stack = tmp->next;
-	tmp->next = NULL;
-	last->next = tmp;
+	last->prev->next = NULL;
+	last->prev = NULL;
+	last->next = begin;
+	begin->prev = last;
+	*stack = last;
 }
 
 void	rra(t_node **stack_a)
