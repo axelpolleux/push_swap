@@ -6,23 +6,27 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 16:41:00 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/21 15:16:58 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/22 11:17:07 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
 #include "../../includes/ft_printf/ft_printf.h"
+#include "../../includes/push_swap.h"
 
 static void	swap(t_node **stack)
 {
-	t_node	node1;
-	t_node	node2;
-	t_node	node3;
+	t_node	*node1;
+	t_node	*node2;
 
-	(void)node1;
-	(void)node2;
-	(void)node3;
-	(void)stack;
+	node1 = *stack;
+	node2 = node1->next;
+	node2->prev = NULL;
+	node1->prev = node2;
+	if (node2->next)
+		node2->next->prev = node1;
+	node1->next = node2->next;
+	node2->next = node1;
+	*stack = node2;
 }
 
 void	sa(t_node **stack_a)

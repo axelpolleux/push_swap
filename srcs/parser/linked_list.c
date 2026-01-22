@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 11:15:28 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/21 13:03:12 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/22 11:29:14 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ static int	check_list(t_node *stack, int value)
 {
 	t_node	*index;
 
-	(void)value;
 	index = stack;
 	while (index)
 	{
@@ -58,7 +57,7 @@ static void	add_back(t_node **stack, t_node *node)
 	node->prev = last;
 }
 
-static t_node	*new_node(int value)
+t_node	*new_node(int value)
 {
 	t_node	*node;
 
