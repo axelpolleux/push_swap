@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 13:04:29 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/22 11:29:50 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/23 15:54:38 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,15 @@ typedef struct s_node
 	struct s_node	*prev;
 }	t_node;
 
+typedef struct s_chunk
+{
+	int	min;
+	int	max;
+	int	mid;
+	int	pushed;
+	int	size;
+}	t_chunk;
+
 // Functions
 int		main(int argc, char **argv);
 char	**parser(int argc, char **argv, int *size);
@@ -37,6 +46,7 @@ t_node	*make_stack(char **args);
 int		is_already_sorted(t_node *stack);
 void	stack_index(t_node *stack);
 int		size_list(t_node *stack);
+void	stack_sort(t_node **stack_a, t_node **stack_b);
 
 // Instructions
 void	sa(t_node **stack_a);

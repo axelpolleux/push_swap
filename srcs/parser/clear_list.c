@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort.c                                             :+:      :+:    :+:   */
+/*   clear_list.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/13 14:15:18 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/23 15:31:11 by apolleux         ###   ########.fr       */
+/*   Created: 2026/01/23 15:34:59 by apolleux          #+#    #+#             */
+/*   Updated: 2026/01/23 15:38:20 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "../../includes/ft_printf/ft_printf.h"
 #include "../../includes/push_swap.h"
 
-void	stack_sort(t_node **stack_a, t_node **stack_b)
+void	clear_list(t_node **stack)
 {
-	int	i;
+	t_node	*tmp;
+
+	while (*stack){
+		if ((*stack)->next)
+			tmp = (*stack)->next;
+
+	}
 }
