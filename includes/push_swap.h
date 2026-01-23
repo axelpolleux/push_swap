@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 13:04:29 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/23 15:54:38 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/23 17:08:55 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <limits.h>
 # include <unistd.h>
+# include <stdlib.h>
 
 typedef struct s_node
 {
