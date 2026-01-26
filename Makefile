@@ -7,8 +7,8 @@ CFLAGS  := -Wall -Wextra -Werror -g
 # ──────────────── PROJECT ──────────────── #
 NAME    := push_swap
 
-SRCS    :=  srcs/algorithm/chunk.c \
-            srcs/algorithm/index.c \
+SRCS    :=  srcs/algorithm/pre_sort.c \
+			srcs/algorithm/index.c \
             srcs/algorithm/sort.c \
             srcs/instructions/push.c \
             srcs/instructions/reverse_rotate.c \

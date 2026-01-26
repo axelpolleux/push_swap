@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 13:04:29 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/23 17:08:55 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/26 17:39:24 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <limits.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <math.h>
 
 typedef struct s_node
 {
@@ -24,15 +25,6 @@ typedef struct s_node
 	struct s_node	*next;
 	struct s_node	*prev;
 }	t_node;
-
-typedef struct s_chunk
-{
-	int	min;
-	int	max;
-	int	mid;
-	int	pushed;
-	int	size;
-}	t_chunk;
 
 // Functions
 int		main(int argc, char **argv);
@@ -45,9 +37,14 @@ t_node	*make_stack(char **args);
 
 // algorithm
 int		is_already_sorted(t_node *stack);
+int		check_index(t_node **stack, int index_to_find);
 void	stack_index(t_node *stack);
 int		size_list(t_node *stack);
+
+// sort functions
 void	stack_sort(t_node **stack_a, t_node **stack_b);
+void	main_sort(t_node **stack_a, t_node **stack_b);
+void	sort_three(t_node **stack);
 
 // Instructions
 void	sa(t_node **stack_a);

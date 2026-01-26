@@ -6,17 +6,28 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 16:21:18 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/22 16:48:40 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/26 18:18:30 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	test(void)
-{
-	int	i;
+#include "../../includes/push_swap.h"
 
-	i = 0;
-	while (i < 4)
-	{
-		i++;
-	}
+void	sort_three(t_node **stack)
+{
+	if ((*stack)->index > (*stack)->next->index
+		&& (*stack)->index > (*stack)->next->next->index)
+		ra(stack);
+	if ((*stack)->next->index > (*stack)->index
+		&& (*stack)->next->index > (*stack)->next->next->index)
+		rra(stack);
+	if ((*stack)->index > (*stack)->next->index)
+		sa(stack);
+}
+
+void	main_sort(t_node **stack_a, t_node **stack_b)
+{
+	if (size_list(*stack_a) == 3)
+		sort_three(stack_a);
+	else
+		stack_sort(stack_a, stack_b);
 }
