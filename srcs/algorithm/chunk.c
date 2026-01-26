@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 14:15:15 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/23 17:09:18 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/26 10:26:00 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,3 @@ t_chunk	*new_chunk(int min, int max)
 
 	return (res);
 }
-
-// void	add_chunk(t_chunk )
-// {
-
-// }
-
-
