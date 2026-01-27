@@ -1,10 +1,8 @@
-# =====================[ PUSH_SWAP :: CYBERPUNK MAKEFILE ]===================== #
-
-# ──────────────── COMPILER ──────────────── #
+# COMPILER
 CC      := cc
-CFLAGS  := -Wall -Wextra -Werror -g
+CFLAGS  := -Wall -Wextra -Werror
 
-# ──────────────── PROJECT ──────────────── #
+# PROJECT
 NAME    := push_swap
 
 SRCS    :=  srcs/algorithm/pre_sort.c \
@@ -22,14 +20,14 @@ SRCS    :=  srcs/algorithm/pre_sort.c \
 
 OBJS    := $(SRCS:.c=.o)
 
-# ──────────────── LIBS ──────────────── #
+# LIBS
 LIBFT_DIR   := includes/libft
 LIBFT       := $(LIBFT_DIR)/libft.a
 
 PRINTF_DIR  := includes/ft_printf
 PRINTF      := $(PRINTF_DIR)/libftprintf.a
 
-# ──────────────── RULES ──────────────── #
+# RULES
 all: $(NAME)
 
 
