@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 16:40:53 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/27 11:52:14 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/27 16:23:37 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void	ra(t_node **stack_a)
 	{
 		rotate(stack_a);
 		ft_printf("ra\n");
-		set_position(*stack_a);
 	}
 }
 
@@ -45,7 +44,6 @@ void	rb(t_node **stack_b)
 	{
 		rotate(stack_b);
 		ft_printf("rb\n");
-		set_position(*stack_b);
 	}
 }
 
@@ -58,7 +56,5 @@ void	rr(t_node **stack_a, t_node **stack_b)
 		rotate(stack_a);
 		rotate(stack_b);
 		ft_printf("rr\n");
-		set_position(*stack_a);
-		set_position(*stack_b);
 	}
 }

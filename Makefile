@@ -17,6 +17,7 @@ SRCS    :=  srcs/algorithm/pre_sort.c \
             srcs/parser/linked_list.c \
             srcs/parser/parser.c \
             srcs/parser/atol.c \
+            srcs/parser/clear.c \
             srcs/main.c
 
 OBJS    := $(SRCS:.c=.o)

@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 11:51:54 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/27 13:41:55 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/27 18:31:53 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	print_list(t_node *stack)
 {
 	while (stack)
 	{
-		ft_printf("Value: %d\nIndex: %d\nPosition: %d\n\n",
-			stack->value, stack->index, stack->pos);
+		ft_printf("Value: %d\nIndex: %d\n\n",
+			stack->value, stack->index);
 		stack = stack->next;
 	}
 }
@@ -29,13 +29,13 @@ int	error(void)
 	return (0);
 }
 
-void	algorithm(t_node *stack_a, t_node *stack_b)
+void	algorithm(t_node **stack_a, t_node **stack_b)
 {
-	main_sort(&stack_a, &stack_b);
+	main_sort(stack_a, stack_b);
 	ft_printf("--Stack A--\n");
-	print_list(stack_a);
+	print_list(*stack_a);
 	ft_printf("--Stack B--\n");
-	print_list(stack_b);
+	print_list(*stack_b);
 }
 
 int	main(int argc, char **argv)
@@ -53,11 +53,14 @@ int	main(int argc, char **argv)
 	if (size_args < 2)
 		return (0);
 	stack_a = make_stack(args);
+	free_parser(args);
 	stack_b = NULL;
 	if (!stack_a)
 		return (error());
 	stack_index(stack_a);
 	if (is_already_sorted(stack_a))
 		return (0);
-	algorithm(stack_a, stack_b);
+	algorithm(&stack_a,&stack_b);
+	clear_list(stack_a);
+	clear_list(stack_b);
 }

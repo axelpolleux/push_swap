@@ -6,25 +6,12 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 11:49:43 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/27 11:19:23 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/27 18:27:46 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft/libft.h"
 #include "../../includes/push_swap.h"
-
-void	set_position(t_node *stack)
-{
-	int	i;
-
-	i = 0;
-	while (stack)
-	{
-		stack->pos = i;
-		stack = stack->next;
-		i++;
-	}
-}
 
 static int	check_arg(char **args)
 {
@@ -64,20 +51,26 @@ static char	**space_cleaner(int argc, char **args)
 {
 	int		i;
 	char	*str;
+	char	*tmp;
 	char	**result;
 
 	i = 1;
-	str = "";
+	str = ft_strdup("");
+	if (!str)
+		return (0);
 	while (i < argc)
 	{
 		if (args[i] == 0)
 			return (0);
-		str = ft_strjoin(str, " ");
-		str = ft_strjoin(str, args[i]);
+		tmp = ft_strjoin(str, " ");
+		free(str);
+		str = tmp;
+		tmp = ft_strjoin(str, args[i]);
+		free(str);
+		str = tmp;
 		i++;
 	}
 	result = ft_split(str, ' ');
-	str = NULL;
 	free(str);
 	return (result);
 }
