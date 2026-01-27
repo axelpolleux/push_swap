@@ -6,13 +6,12 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 17:07:16 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/27 16:23:30 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/27 18:45:34 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_printf/ft_printf.h"
 #include "../../includes/push_swap.h"
-#include <unistd.h>
 
 static void	reverse_rotate(t_node **stack)
 {

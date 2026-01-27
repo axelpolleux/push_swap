@@ -6,22 +6,12 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 11:51:54 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/27 18:34:39 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/27 18:44:15 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf/ft_printf.h"
 #include "../includes/push_swap.h"
-
-void	print_list(t_node *stack)
-{
-	while (stack)
-	{
-		ft_printf("Value: %d\nIndex: %d\n\n",
-			stack->value, stack->index);
-		stack = stack->next;
-	}
-}
 
 int	error(void)
 {
@@ -32,10 +22,6 @@ int	error(void)
 void	algorithm(t_node **stack_a, t_node **stack_b)
 {
 	main_sort(stack_a, stack_b);
-	ft_printf("--Stack A--\n");
-	print_list(*stack_a);
-	ft_printf("--Stack B--\n");
-	print_list(*stack_b);
 }
 
 int	main(int argc, char **argv)

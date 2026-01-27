@@ -6,13 +6,12 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 16:40:50 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/27 16:23:21 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/27 18:45:20 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_printf/ft_printf.h"
 #include "../../includes/push_swap.h"
-#include <unistd.h>
 
 static void	push(t_node **from, t_node **dest)
 {
