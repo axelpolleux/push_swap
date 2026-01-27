@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 11:51:54 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/27 18:31:53 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/27 18:34:39 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	main(int argc, char **argv)
 	stack_index(stack_a);
 	if (is_already_sorted(stack_a))
 		return (0);
-	algorithm(&stack_a,&stack_b);
+	algorithm(&stack_a, &stack_b);
 	clear_list(stack_a);
 	clear_list(stack_b);
 }
