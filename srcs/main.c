@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 11:51:54 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/26 17:39:39 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/27 13:41:55 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	print_list(t_node *stack)
 {
 	while (stack)
 	{
-		ft_printf("Value: %d\nIndex: %d\n\n",
-			stack->value, stack->index);
+		ft_printf("Value: %d\nIndex: %d\nPosition: %d\n\n",
+			stack->value, stack->index, stack->pos);
 		stack = stack->next;
 	}
 }

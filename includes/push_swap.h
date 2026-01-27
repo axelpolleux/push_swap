@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 13:04:29 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/26 17:39:24 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/27 11:19:28 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,12 @@ typedef struct s_node
 {
 	int				value;
 	int				index;
+
+	int				pos;
+	int				target_pos;
+	int				cost_a;
+	int				cost_b;
+
 	struct s_node	*next;
 	struct s_node	*prev;
 }	t_node;
@@ -44,7 +50,9 @@ int		size_list(t_node *stack);
 // sort functions
 void	stack_sort(t_node **stack_a, t_node **stack_b);
 void	main_sort(t_node **stack_a, t_node **stack_b);
+void	set_position(t_node *stack);
 void	sort_three(t_node **stack);
+void	sort_two(t_node **stack);
 
 // Instructions
 void	sa(t_node **stack_a);

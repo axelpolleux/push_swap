@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 11:15:28 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/22 17:08:26 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/27 11:37:09 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,6 @@ t_node	*make_stack(char **args)
 		add_back(&stack, node);
 		i++;
 	}
+	set_position(stack);
 	return (stack);
 }

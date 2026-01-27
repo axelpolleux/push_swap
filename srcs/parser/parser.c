@@ -6,12 +6,25 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 11:49:43 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/23 15:34:45 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/27 11:19:23 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft/libft.h"
 #include "../../includes/push_swap.h"
+
+void	set_position(t_node *stack)
+{
+	int	i;
+
+	i = 0;
+	while (stack)
+	{
+		stack->pos = i;
+		stack = stack->next;
+		i++;
+	}
+}
 
 static int	check_arg(char **args)
 {
