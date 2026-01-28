@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 11:51:54 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/28 09:41:10 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/28 15:33:31 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,10 @@ int	main(int argc, char **argv)
 		return (0);
 	args = parser(argc, argv, &size_args);
 	if (!args)
+	{
+		free_parser(args);
 		return (error());
+	}
 	if (size_args < 2)
 		return (0);
 	stack_a = make_stack(args);
@@ -40,7 +43,10 @@ int	main(int argc, char **argv)
 		return (error());
 	stack_index(stack_a);
 	if (is_already_sorted(stack_a))
+	{
+		clear_list(stack_a);
 		return (0);
+	}
 	algorithm(&stack_a, &stack_b);
 	clear_list(stack_a);
 	clear_list(stack_b);
