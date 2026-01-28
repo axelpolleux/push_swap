@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 11:51:54 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/27 18:44:15 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/28 09:41:10 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,6 @@ int	error(void)
 {
 	ft_printf("Error\n");
 	return (0);
-}
-
-void	algorithm(t_node **stack_a, t_node **stack_b)
-{
-	main_sort(stack_a, stack_b);
 }
 
 int	main(int argc, char **argv)

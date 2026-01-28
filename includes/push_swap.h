@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 13:04:29 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/27 18:23:38 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/28 09:41:49 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ void	stack_index(t_node *stack);
 int		size_list(t_node *stack);
 
 // sort functions
+void	algorithm(t_node **stack_a, t_node **stack_b);
 void	stack_sort(t_node **stack_a, t_node **stack_b);
-void	main_sort(t_node **stack_a, t_node **stack_b);
 void	sort_three(t_node **stack);
 void	sort_two(t_node **stack);
 
