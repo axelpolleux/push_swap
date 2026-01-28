@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 11:15:28 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/28 15:41:57 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/28 18:21:11 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,17 +77,16 @@ t_node	*make_stack(char **args)
 	t_node	*stack;
 	t_node	*node;
 
-	i = 0;
+	i = -1;
 	stack = NULL;
-	while (args[i])
+	while (args[++i])
 	{
 		if (!ft_atol(args[i], &value))
 		{
 			clear_list(stack);
 			return (0);
 		}
-		ft_atol(args[i], &value);
-		node = new_node(ft_atoi(args[i]));
+		node = new_node(value);
 		if (!node || !check_list(stack, value))
 		{
 			if (node)
@@ -96,7 +95,6 @@ t_node	*make_stack(char **args)
 			return (0);
 		}
 		add_back(&stack, node);
-		i++;
 	}
 	return (stack);
 }

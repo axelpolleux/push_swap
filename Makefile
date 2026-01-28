@@ -1,6 +1,6 @@
 # COMPILER
 CC      := cc
-CFLAGS  := -Wall -Wextra -Werror
+CFLAGS  := -Wall -Wextra -Werror -g
 
 # PROJECT
 NAME    := push_swap
