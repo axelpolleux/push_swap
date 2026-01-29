@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 13:04:29 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/28 09:41:49 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/29 17:21:27 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void	free_parser(char **args);
 int		is_already_sorted(t_node *stack);
 int		check_index(t_node **stack, int index_to_find);
 void	stack_index(t_node *stack);
+int		top_index(t_node **stack);
 int		size_list(t_node *stack);
 
 // sort functions

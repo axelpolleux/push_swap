@@ -6,13 +6,13 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 14:15:18 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/27 17:31:58 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/29 17:20:37 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-static int	top_index(t_node **stack)
+int	top_index(t_node **stack)
 {
 	int		i;
 	int		max;
