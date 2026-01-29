@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 11:51:54 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/28 18:05:12 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/29 16:59:46 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ int	main(int argc, char **argv)
 	t_node	*stack_b;
 	char	**args;
 
+	if (argc == 1)
+		return (0);
 	args = build_args(argc, argv);
 	if (!args)
 		return (error());

@@ -6,7 +6,7 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 16:21:18 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/28 09:41:06 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/29 17:17:28 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,13 @@ void	sort_three(t_node **stack)
 	if ((*stack)->index > (*stack)->next->index)
 		sa(stack);
 }
+
+void	sort_five(t_node **stack_a, t_node **stack_b)
+{
+	if ((*stack_a))
+
+}
+
 
 void	algorithm(t_node **stack_a, t_node **stack_b)
 {

@@ -6,11 +6,10 @@
 /*   By: apolleux <apolleux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 11:15:28 by apolleux          #+#    #+#             */
-/*   Updated: 2026/01/28 18:21:11 by apolleux         ###   ########.fr       */
+/*   Updated: 2026/01/29 16:59:32 by apolleux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft/libft.h"
 #include "../../includes/push_swap.h"
 
 int	size_list(t_node *stack)
